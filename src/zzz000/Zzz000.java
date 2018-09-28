@@ -1,22 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package zzz000;
 
-/**
- *
- * @author Student
- */
 public class Zzz000 {
 
     /**
-     * @param args the command line arguments
+     *
+     * @param x
+     *
      */
+    public static double power(double base, int exponent) {
+        
+        double total = base;
+
+        if (exponent ==1) {
+            return base;
+        } else {
+            total= total * (power(base , exponent -1 ));
+            return total;
+        }
+        }
+
     public static void main(String[] args) {
-        //save == commit
-        System.out.println("push to Github");
+
+        System.out.println(power(2.0, 2));
     }
-    
+
 }
